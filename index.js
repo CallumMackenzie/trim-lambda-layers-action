@@ -25,7 +25,7 @@ const run = async () => {
 		}).promise();
 
 		const sorted_versions = lambda_versions_request
-			.listLayerVersions.sort((a, b) => a.Version - b.Version);
+			.LayerVersions.sort((a, b) => a.Version - b.Version);
 		const versions_to_delete = sorted_versions.length - versions_to_keep;
 
 		core.info("Deleting "
