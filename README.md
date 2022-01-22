@@ -1,4 +1,4 @@
-# Delete Lambda Layers Action
+# Trim Lambda Layers Action
 
 This action takes given aws credentials and deletes lambda layers from oldest to newest until the provided amount remains
 
