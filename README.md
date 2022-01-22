@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trim versions
-        uses: callummackenzie/trim-lambda-layers-action@v0.1
+        uses: callummackenzie/trim-lambda-layers-action@v0.2
         with:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
