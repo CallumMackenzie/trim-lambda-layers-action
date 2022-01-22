@@ -8528,7 +8528,7 @@ const run = async () => {
 	try {
 		// Extract name
 		const lambda_layer_name = core.getInput('layer_name', { required: true });
-		const vesions_to_keep = core.getInput('version_keep_count', { required: true });
+		const versions_to_keep = core.getInput('version_keep_count', { required: true });
 		const lambda_config = {
 			accessKeyId: core.getInput('aws_access_key_id', { required: true }),
 			apiVersion: '2015-03-31',
@@ -8547,7 +8547,7 @@ const run = async () => {
 		}).promise();
 
 		const sorted_versions = lambda_versions_request
-			.listLayerVersions.sort((a, b) => a.Version - b.Version);
+			.LayerVersions.sort((a, b) => a.Version - b.Version);
 		const versions_to_delete = sorted_versions.length - versions_to_keep;
 
 		core.info("Deleting "
