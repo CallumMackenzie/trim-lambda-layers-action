@@ -26,7 +26,7 @@ jobs:
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws_region: ${{ secrets.AWS_REGION }
           layer_name: SomeAWSLambdaLayer
-		  version_keep_count: 6
+          version_keep_count: 6
 ```
 ## Parameters
 - aws_access_key_id
