@@ -1,0 +1,22 @@
+name: 'Delete Old Lambda Layers'
+description: 'Delete old lambda layers, keeping the recent versions.'
+inputs:
+  layer_name:
+    description: 'The lambda layer name'
+    required: true
+  version_keep_count:
+    description: 'The number of latest versions to keep.'
+    required: true
+    default: 4
+  aws_access_key_id:
+    description: 'The AWS access key id for an IAM user'
+    required: true
+  aws_secret_access_key:
+    description: 'The AWS secret access key for an IAM user'
+    required: true
+  aws_region:
+    description: 'The AWS region the lambda function is located in'
+    required: true
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
